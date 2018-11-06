@@ -33,6 +33,7 @@ module.exports = {
           'b-card-img': 'img-src',
           'b-carousel-slide': 'img-src',
           'b-embed': 'src',
+          'v-parallax': 'src',
         },
       }));
   },

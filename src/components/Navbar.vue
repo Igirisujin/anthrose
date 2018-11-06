@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="dark" sticky>
+  <b-navbar toggleable="md" type="dark" class="background-2" sticky>
     <router-link to="/" class="navbar-brand">
       <b-img alt="ASE Logo" src="@/assets/logo.svg" />
     </router-link>
@@ -52,6 +52,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
+
+
 .navbar-dark .navbar-nav .nav-item.active .nav-link {
   color: rgba($color: #fff, $alpha: 1.0);
 }

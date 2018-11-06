@@ -1,7 +1,10 @@
 <template>
   <div class="home">
     <div class="header">
-      <b-img src="@/assets/background.jpg"/>
+      <v-parallax
+        height="600"
+        src="@/assets/background.jpg"
+        ></v-parallax>
     </div>
     <Navbar />
     <div style="height:1500px"></div>
@@ -21,9 +24,6 @@ export default {
 </script>
 
 <style lang="scss">
-.header {
-    height: 50vh;
-    width: 100vw;
-    overflow: hidden;
-}
+
+
 </style>
