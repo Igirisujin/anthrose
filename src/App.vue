@@ -10,7 +10,8 @@ $color-background-1: #021921;
 $color-background-2: #143038;
 $color-highlight-1: #daf7c8;
 $color-highlight-2: #ADD1DD;
-$color-foreground-1: #6EA1A5;
+$color-foreground-1: #24474a;
+$color-foreground-2: #445245;
 
 @import url('https://fonts.googleapis.com/css?family=Acme|Lato|Sigmar+One');
 
@@ -58,16 +59,20 @@ $color-foreground-1: #6EA1A5;
   background-color: $color-background-2;
 }
 
-.bg-foreground-1 {
+.bg-highlight-1 {
   background-color: $color-highlight-1;
 }
 
-.bg-highlight-1 {
+.bg-highlight-2 {
   background-color: $color-highlight-2;
 }
 
-.bg-highlight-2 {
+.bg-foreground-1 {
   background-color: $color-foreground-1;
+}
+
+.bg-foreground-2 {
+  background-color: $color-foreground-2;
 }
 
 .text-shadow-1 {
@@ -94,5 +99,32 @@ $color-foreground-1: #6EA1A5;
 .bg-darken {
   background-color: rgba($color: #000000, $alpha: 0.2);
 }
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@mixin fade-in($time) {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+  animation-duration: $time;
+}
+
+.fade-in-1 {
+  @include fade-in(.5s);
+}
+
+.fade-in-2 {
+  @include fade-in(1s);
+}
+
+
 
 </style>

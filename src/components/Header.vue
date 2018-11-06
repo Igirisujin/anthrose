@@ -2,8 +2,8 @@
     <div class="header">
         <v-parallax dark height="700" :src="require(`@/assets/${background}`)" >
             <div class="bg-darken h-100 w-100">
+                <b-img src="@/assets/Char1.png" class="character position-absolute h-100 shadow-fit-1"/>
                 <v-layout align-center column justify-center class="h-75">
-                    <b-img src="@/assets/Char1.png" class="character position-absolute h-100 shadow-fit-1"/>
                     <h1 class="display-1 font-header-1 font-weight-bold pt-5 text-shadow-1">Anthro Southeast:</h1>
                     <h2 class="display-4 font-header-2 text-highlight-1 text-shadow-2">The Worlds Within</h2>
                 </v-layout>
@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import 'bootstrap/scss/bootstrap.scss';
+
 .header {
 
     h1, h2 {
@@ -43,7 +46,16 @@ export default {
     img.character {
         right: 0;
         bottom: -5rem;
-        z-index: 0
+        z-index: 0;
+        opacity: 0;
+        -webkit-transition: 1s; /* Safari */
+        transition: 1s;
+    }
+
+    @include media-breakpoint-up(md) {
+        img.character {
+            opacity: 1;
+        }
     }
 }
 </style>
