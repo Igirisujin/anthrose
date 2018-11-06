@@ -1,7 +1,10 @@
 <template>
   <div class="home">
+    <div class="header">
+      <b-img src="@/assets/background.jpg"/>
+    </div>
     <Navbar />
-    <h1>HOME PAGE!!</h1>
+    <div style="height:1500px"></div>
   </div>
 </template>
 
@@ -16,3 +19,11 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.header {
+    height: 50vh;
+    width: 100vw;
+    overflow: hidden;
+}
+</style>

@@ -1,11 +1,13 @@
 <template>
-  <b-navbar toggleable="md" type="dark" variant="dark">
+  <b-navbar toggleable="md" type="dark" variant="dark" sticky>
     <router-link to="/" class="navbar-brand">
-      <img alt="ASE Logo" src="../assets/logo.svg" />
+      <b-img alt="ASE Logo" src="@/assets/logo.svg" />
     </router-link>
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
-        <router-link tag="b-nav-item" active-class="active" v-for="routes in links" v-bind:key="routes.id" :to="`${routes.page}`" exact>
+        <router-link v-for="routes in links"
+            v-bind:key="routes.id" :to="`${routes.page}`"
+            tag="b-nav-item" active-class="active" exact>
           <a class="nav-link">{{routes.text}}</a>
         </router-link>
       </b-navbar-nav>
@@ -26,25 +28,25 @@
 </template>
 
 <script>
-  export default {
-    name: "Navbar",
-    data() {
-      return {
-        links: [
-          {
-            id: 0,
-            text: 'Home',
-            page: '/'
-          },
-          {
-            id: 1,
-            text: 'About',
-            page: '/about'
-          }
-        ]
-      }
-    }
-  };
+export default {
+  name: 'Navbar',
+  data() {
+    return {
+      links: [
+        {
+          id: 0,
+          text: 'Home',
+          page: '/',
+        },
+        {
+          id: 1,
+          text: 'About',
+          page: '/about',
+        },
+      ],
+    };
+  },
+};
 
 </script>
 
