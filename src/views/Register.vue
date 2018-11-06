@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <Header background="background1.jpg" />
+  <div class="register">
+    <Header background="background2.jpg" />
     <Navbar />
     <b-container>
       <b-row>
@@ -17,7 +17,7 @@ import Navbar from '@/components/Navbar.vue';
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'home',
+  name: 'register',
   components: {
     Navbar,
     Header

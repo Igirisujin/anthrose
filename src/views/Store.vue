@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="store">
     <Header background="background1.jpg" />
     <Navbar />
     <b-container>
@@ -17,7 +17,7 @@ import Navbar from '@/components/Navbar.vue';
 import Header from '@/components/Header.vue';
 
 export default {
-  name: 'home',
+  name: 'store',
   components: {
     Navbar,
     Header

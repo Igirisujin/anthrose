@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="md" type="dark" class="background-2" sticky>
+  <b-navbar toggleable="md" type="dark" class="bg-background-2" sticky>
     <router-link to="/" class="navbar-brand">
       <b-img alt="ASE Logo" src="@/assets/logo.svg" />
     </router-link>
@@ -40,6 +40,16 @@ export default {
         },
         {
           id: 1,
+          text: 'Register',
+          page: '/register',
+        },
+        {
+          id: 2,
+          text: 'Store',
+          page: '/store',
+        },
+        {
+          id: 3,
           text: 'About',
           page: '/about',
         },
