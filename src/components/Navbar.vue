@@ -3,7 +3,7 @@
     <router-link to="/" class="navbar-brand">
       <b-img alt="ASE Logo" src="@/assets/logo.svg" />
     </router-link>
-    <b-collapse is-nav id="nav_collapse">
+    <b-collapse is-nav id="nav_collapse" class="text-center">
       <b-navbar-nav>
         <router-link v-for="routes in links"
             v-bind:key="routes.id" :to="`${routes.page}`"
@@ -63,7 +63,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
-
+.navbar-toggler {
+  position: absolute;
+  right:0;
+  top: 0;
+  margin-top: 0.6rem;
+  margin-right: 1rem;
+}
 
 .navbar-dark .navbar-nav .nav-item.active .nav-link {
   color: rgba($color: #fff, $alpha: 1.0);
